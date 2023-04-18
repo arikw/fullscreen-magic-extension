@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Fullscreen Magic",
+    "version": "1.0.0",
+    "description": "Automagically finds a video, game, frame, or other embedded content in a webpage and makes it full screen with a single click",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_title": "Click to fullscreen"
+    },
+    "background": {
+        "service_worker": "main.js"
+    },
+    "web_accessible_resources": [{
+        "matches": ["<all_urls>"],
+        "resources": ["utils.js"]
+    }],
+    "icons": {
+        "16": "/icons/16.png",
+        "32": "/icons/32.png",
+        "48": "/icons/48.png",
+        "128": "/icons/128.png"
+    }
+}
